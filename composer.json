@@ -1,0 +1,5 @@
+{
+    "name": "weboender/mvc-stockies",
+    "description": "application to track items, build with php native mvc",
+    "type": "project"
+}
