@@ -8,15 +8,22 @@ this application is built using PHP Native language and using mvc structure
 
 ### Installation
 - first clone this repo with command
-  `git clone https://github.com/weboendercommunity/mvc-stockies.git`
+  ``` bash
+  $ git clone https://github.com/weboendercommunity/mvc-stockies.git
+  ```
 
 - then go into repo directory
-  `cd mvc-stockies`  
+  ``` bash
+  $ cd mvc-stockies  
+  ```
 
-- run `npm install`, but if you dont have node.js installed on your device please install it first
+- install dependency, but if you dont have node.js and composer installed on your device please install it first
+  ``` bash
+  $ composer install
+  $ npm install
+  ```
   
-- then run in your browser
-  `http://localhost/mvc-stockies/public`
+- then run in your browser`http://localhost/mvc-stockies/public`
 
 ### Database documentation
 - https://dbdocs.io/shevaathalla/MVC_Stockies
