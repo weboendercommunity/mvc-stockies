@@ -1,4 +1,5 @@
 <div class="container">
+       
     <div class="card">
         <div class="card-header">
             <h3>
@@ -23,5 +24,6 @@
             <button type="submit" class="btn btn-success">Add new Sample</button>
             </form>
         </div>
+
     </div>
 </div>

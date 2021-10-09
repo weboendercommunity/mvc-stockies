@@ -23,7 +23,7 @@ class SampleModel{
         return $this->db->single();
     }
 
-    public function storeSampleData($data)
+   public function storeSampleData($data)
     {    
         $query = "INSERT INTO ".$this->table." (name) VALUES (:name)";
 
