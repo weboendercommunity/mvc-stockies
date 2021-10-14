@@ -25,10 +25,10 @@ class SampleModel{
 
     public function storeSampleData($data)
     {    
-        $query = "INSERT INTO ".$this->table." (name) VALUES (:name)";
+        $query = "INSERT INTO ".$this->table." (name) VALUES (:sample)";
 
         $this->db->query($query);        
-        $this->db->bind('name', $data['name']);
+        $this->db->bind('sample', $data['name']);
 
         $this->db->execute();
      

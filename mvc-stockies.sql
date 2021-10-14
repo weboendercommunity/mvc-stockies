@@ -2,11 +2,6 @@
 -- Database: MySQL
 -- Generated at: 2021-10-07T14:04:21.702Z
 
-CREATE TABLE `Sample` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `name` varchar(255)
-);
-
 CREATE TABLE `Employees` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `employee_code` varchar(255),

@@ -11,7 +11,7 @@
                     <label for="name" class="form-label">Name: </label>
                     <input 
                     type="text" 
-                    name="name" 
+                    name="sample" 
                     id="name" 
                     aria-describedby="sampleName" 
                     placeholder="Example Input"
