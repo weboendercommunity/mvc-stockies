@@ -6,6 +6,11 @@
             </a>
         </div> 
     </div>
+
+    <div class="row">
+              <?php Flasher::flash();?>
+        </div>
+        
     <table class="table">
         <thead>
             <tr>
