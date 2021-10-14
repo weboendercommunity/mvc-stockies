@@ -35,10 +35,15 @@ class Sample extends Controller
 
     public function store()
     {
-        $this->model('SampleModel')->storeSampleData($_POST);
-        Flasher::setFlash('berhasil', 'ditambahkan', 'success');
-        header('Location: ' . BASE_URL . '/sample');
-        exit;
+        $response = $this->model('SampleModel')->storeSampleData($_POST);
+        if ($response == "success") {
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: ' . BASE_URL . '/sample');
+            exit;
+        }else{
+            Flasher::setFlash('gagal', $response, 'danger');
+            header('Location: ' . BASE_URL . '/sample');
+            exit;
+        }
     }
-       
 }
