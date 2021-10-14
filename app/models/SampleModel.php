@@ -1,5 +1,6 @@
 <?php
-class SampleModel{
+class SampleModel
+{
 
     private $table = 'sample';
     private $db;
@@ -11,26 +12,31 @@ class SampleModel{
 
     public function getAllSample()
     {
-        $this->db->query('SELECT * FROM '.$this->table);
+        $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
 
     public function getSampleById($id)
     {
-        $this->db->query('SELECT * FROM '.$this->table.' WHERE id=:id');
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
 
         return $this->db->single();
     }
 
-   public function storeSampleData($data)
-    {    
-        $query = "INSERT INTO ".$this->table." (name) VALUES (:sample)";
+    public function storeSampleData($data)
+    {
+        try {
+            $query = "INSERT INTO " . $this->table . " (name) VALUES (:sample)";
 
-        $this->db->query($query);        
-        $this->db->bind('sample', $data['name']);
+            $this->db->query($query);
+            $this->db->bind('sample', $data['sample']);
 
-        $this->db->execute();
-     
+            $this->db->execute();
+
+            return 'success';
+        } catch (\Throwable $th) {
+            return $th;
+        }
     }
 }
