@@ -9,7 +9,7 @@ class Flasher{
             'do'      => $do,
             'type'    => $type
         ];
-    }
+    }   
     public static function flash(){
         if (isset ($_SESSION['flash'])){
             echo '<div class="alert alert-' . $_SESSION['flash']['type'] . ' alert-dismissible fade show" role="alert"> Data
